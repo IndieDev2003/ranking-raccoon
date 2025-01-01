@@ -1,5 +1,5 @@
 import cat from "./cat.svg";
-import catHero from "./catHero.svg";
+import catHero from "./cathero.svg";
 
 import starsHero from "./starsHero.svg";
 import racoon from "./raccoon2.svg";
