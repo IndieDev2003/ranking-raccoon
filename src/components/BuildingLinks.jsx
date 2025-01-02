@@ -15,43 +15,7 @@ function BuildingLinks() {
     () => {
       const matchMedia = gsap.matchMedia();
 
-      matchMedia.add("(max-width: 639px)", () => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: pageRef.current,
-            start: "top 80%",
-            end: "bottom 100%",
-            // markers: true,
-            scrub: true,
-          },
-        });
-          
-          
-          tl.from(".links-h2", {
-              x: -300,
-              duration: 1,
-          })
-
-          tl.from(".medal", {
-              y: 30,
-              opacity: 0,
-          })
-          tl.from(".medal-text", {
-              y: 20,
-              opacity: 0,
-              duration: 1.2,
-          });
-
-          tl.from('.medal-button', {
-                y: -10,
-                opacity: 0,
-          })
-          tl.from('.accordion-item', {
-              y: 50,
-              opacity: 0,
-              stagger: 0.3,
-          })
-      });
+      matchMedia.add("(max-width: 639px)");
 
       matchMedia.add("(min-width: 640px)", () => {
         const tl = gsap.timeline({

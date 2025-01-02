@@ -48,25 +48,7 @@ function ColdEmail() {
       });
 
       //? Animation for mobile
-          matchMedia.add("(max-width:639px)", () => {
-              const tl = gsap.timeline({
-                  scrollTrigger: {
-                  trigger: pageRef.current,
-                  // markers: true,
-                  start: "top 80%",
-                  end: "bottom 90%",
-                  scrub: 1,
-                  }
-              })
-              
-              tl.from(".cold-email-h2", { opacity: 0, y: 100, duration: 1 })
-                  .from(".cold-email-step", {
-                      x: 300,
-                    //   y: 30,
-                      stagger:0.5
-                  })
-            .from('button',{opacity: 0, y: -20, duration:0.7})
-          });
+      matchMedia.add("(max-width:639px)", () => { });
       
           return () => matchMedia.revert();
     },

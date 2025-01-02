@@ -37,24 +37,7 @@ function WhyUs() {
         });
       });
 
-      matchMedia.add("(max-width:639px", () => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: whyUsRef.current,
-            start: "top 80%",
-            end: "bottom 100%",
-            scrub: 1,
-            markers: true,
-          },
-        });
-
-        tl.from(".why-us-item", {
-          duration: 1,
-          x: 100,
-          opacity: 0,
-          stagger: 0.5,
-        });
-      });
+      matchMedia.add("(max-width:639px");
 
       return () => matchMedia.revert();
     },

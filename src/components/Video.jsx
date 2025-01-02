@@ -11,23 +11,7 @@ function Video() {
     () => {
       const matchMedia = gsap.matchMedia();
 
-      matchMedia.add("(max-width: 639px)", () => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: videoPageRef.current,
-            start: "top 80%",
-            end: "bottom 90%",
-            // markers: true,
-            scrub: true,
-          },
-        });
-          
-          
-          tl.from("iframe", {
-              x: 100,
-              
-          })
-      });
+      matchMedia.add("(max-width: 639px)");
 
       matchMedia.add("(min-width:640px)", () => {
         const tl = gsap.timeline({
