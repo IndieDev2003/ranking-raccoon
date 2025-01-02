@@ -15,23 +15,23 @@ function BuildingLinks() {
     () => {
       const matchMedia = gsap.matchMedia();
 
-      matchMedia.add("(max-width: 639px)");
-
       matchMedia.add("(min-width: 640px)", () => {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: pageRef.current,
-            start: "top 80%",
-            end: "bottom 100%",
+            start: "top 90%",
+            end: "top -10%",
 
-            // markers: true,
+            
             scrub: true,
           },
         });
 
         tl.from(".links-h2", {
           x: -300,
+          y:20,
           duration: 1,
+          opacity:0
         });
 
         tl.from(".medal", {
@@ -55,7 +55,6 @@ function BuildingLinks() {
           stagger: 0.5,
         });
       });
-      return () => matchMedia.revert();
     },
     { scope: pageRef.current }
   );
@@ -65,7 +64,7 @@ function BuildingLinks() {
       <h2 className="links-h2 text-5xl font-semibold text-gray-900 ">
         A safe way of building links
       </h2>
-      <div className="mt-20 flex flex-col sm:flex-row justify-between w-full  gap-4">
+      <div className=" mt-10 sm:mt-20 flex flex-col sm:flex-row justify-between w-full  gap-4">
         {/* Left Side */}
         <div className="flex flex-col w-fit gap-3 items-start ">
           <img src={medal} className="h-20 medal" alt="" />

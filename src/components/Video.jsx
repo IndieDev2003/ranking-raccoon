@@ -11,13 +11,11 @@ function Video() {
     () => {
       const matchMedia = gsap.matchMedia();
 
-      matchMedia.add("(max-width: 639px)");
-
       matchMedia.add("(min-width:640px)", () => {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: videoPageRef.current,
-            start: "top 80%",
+            start: "top 100%",
             end: "bottom 100%",
             // markers: true,
             scrub: true,
@@ -37,7 +35,7 @@ function Video() {
   return (
     <div
       ref={videoPageRef}
-      className="sm:h-screen w-full items-center flex justify-center"
+      className="h-fit py-10 sm:py-0 sm:h-screen w-full items-center flex justify-center"
     >
       <iframe
         className="h-[90%] w-[90%]"

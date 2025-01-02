@@ -30,7 +30,7 @@ function Pricings() {
           scrollTrigger: {
             trigger: pricingRef.current,
             start: "top 80%",
-            end: "bottom 110%",
+            end: "bottom 100%",
             scrub: true,
             // pin:true,
             // markers: true,

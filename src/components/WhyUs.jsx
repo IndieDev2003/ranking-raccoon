@@ -37,9 +37,7 @@ function WhyUs() {
         });
       });
 
-      matchMedia.add("(max-width:639px");
-
-      return () => matchMedia.revert();
+     
     },
     {
       scope: whyUsRef.current,

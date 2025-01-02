@@ -21,8 +21,8 @@ function ColdEmail() {
             trigger: pageRef.current,
             // markers: true,
             start: "top 80%",
-                end: "bottom 100%",
-            
+            end: "bottom 100%",
+
             scrub: 1,
           },
         });
@@ -34,11 +34,10 @@ function ColdEmail() {
             // duration: 1,
             stagger: 0.3,
           })
-            .from('.cold-email button',{opacity: 0, y: -20,})
+          .from(".cold-email .cold-btn", { y: -120 })
           .from(".img-container", {
             x: 200,
             opacity: 0,
-            
           })
           .from(".img-container img", {
             opacity: 0,
@@ -46,17 +45,12 @@ function ColdEmail() {
             stagger: 0.2,
           });
       });
-
-      //? Animation for mobile
-      matchMedia.add("(max-width:639px)", () => { });
-      
-          return () => matchMedia.revert();
     },
     { scope: pageRef.current }
   );
 
   return (
-    <section ref={pageRef} className="flex flex-col w-fulll h-fit sm:mt-44">
+    <section ref={pageRef} className="flex flex-col w-fulll h-fit mt-14 sm:mt-28 cold-email">
       <h2 className="cold-email-h2 text-4xl sm:text-5xl font-medium">
         Get robust backlinks without a single cold email
       </h2>
@@ -68,7 +62,7 @@ function ColdEmail() {
           <ColdEmailStep />
           <ColdEmailStep />
           <Button
-            className="w-fit font-semibold mt-10"
+            className="w-fit font-semibold mt-10 cold-btn"
             buttonText="Try it Out"
           />
         </div>
