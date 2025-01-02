@@ -38,7 +38,7 @@ function ColdEmail() {
           .from(".img-container", {
             x: 200,
             opacity: 0,
-            ease: "back.in",
+            
           })
           .from(".img-container img", {
             opacity: 0,

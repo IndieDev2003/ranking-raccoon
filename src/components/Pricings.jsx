@@ -7,7 +7,7 @@ import gsap from "gsap";
 
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP,ScrollTrigger);
 function Pricings() {
   const pricingRef = useRef(null);
 
@@ -20,36 +20,47 @@ function Pricings() {
           scrollTrigger: {
             trigger: pricingRef.current,
             start: "top 80%",
-            end: "bottom 60%",
-            // scrub: true,
+            end: "bottom 90%",
+          //  pin:pricingRef.current,
+            scrub: true,
+            // markers: true,
+          },
+        });
+        const tl2 = gsap.timeline({
+          scrollTrigger: {
+            trigger: pricingRef.current,
+            start: "top 80%",
+            end: "bottom 110%",
+            scrub: true,
+            // pin:true,
             // markers: true,
           },
         });
 
-        tl.from(".pricing-main-h2", {
+        tl2.from(".pricing-main-h2", {
           y: 100,
           opacity: 0,
           duration: 1,
         })
-          tl.from(".pricing-box", {
+          tl2.from(".pricing-box", {
             x: -100,
             opacity: 0,
           })
-          tl.from(".pricing-box .stars ,.pricing-box h4", {
+          tl2.from(".pricing-box .stars ,.pricing-box h4", {
             y: 10,
             opacity: 0,
             stagger: 0.5,
           })
-          tl.from(".pricing-box h5", {
+          tl2.from(".pricing-box h5", {
             y: 10,
             opacity: 0,
           })
-         tl.from(".pricing-box li", {
+         tl2.from(".pricing-box li", {
             y: 10,
             opacity: 0,
             stagger: 0.5,
           })
-        tl.from(".pricing-box .btn-pricing", {
+        tl2.from(".pricing-box .btn-pricing", {
           y: 10,
           opacity: 0,
         })

@@ -9,20 +9,12 @@ import CTA from './components/CTA'
 import Pricings from './components/Pricings'
 import Newsletter from './components/Newsletter'
 import Footer from './components/Footer'
+import Home from './Pages/Home'
 
 function App() {
   return (
     <div className='px-2 sm:px-10'>
-      <Nav />
-      <Hero />
-      <WhyUs />
-      <BuildingLinks />
-      {/* <Video/> */}
-      <ColdEmail />
-      <CTA />
-      <Pricings />
-      <Newsletter />
-      <Footer/>
+     <Home/>
       
 
       {/* <div className="h-[50vh]"></div> */}

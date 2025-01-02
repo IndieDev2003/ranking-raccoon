@@ -17,7 +17,7 @@ function Video() {
             trigger: videoPageRef.current,
             start: "top 80%",
             end: "bottom 90%",
-            markers: true,
+            // markers: true,
             scrub: true,
           },
         });
@@ -35,7 +35,7 @@ function Video() {
             trigger: videoPageRef.current,
             start: "top 80%",
             end: "bottom 100%",
-            markers: true,
+            // markers: true,
             scrub: true,
           },
         });
