@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="h-screen sm:h-[50vh] w-full px-10 flex  items-center border-t">
+    <footer className="h-fit py-10 sm:h-[50vh] w-full px-5 sm:px-10 flex  items-center border-t">
       <div className="h-fit w-full grid  sm:grid-cols-4 gap-10 sm:gap-0">
         <h2 className="text-3xl">Gagan Suman</h2>
         <ul>
